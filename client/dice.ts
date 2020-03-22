@@ -37,13 +37,6 @@ export async function fetchDicebots(): Promise<DiceName[]> {
   return res.data.names
     .map((x: NameRes) => {
       return { gameType: x.system, name: x.name };
-    })
-    .sort((a: DiceName, b: DiceName) => {
-      if (a.name > b.name) {
-        return 1;
-      } else {
-        return -1;
-      }
     });
 }
 

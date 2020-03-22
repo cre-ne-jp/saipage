@@ -1,6 +1,6 @@
 {
   "name": "saipage",
-  "version": "0.0.0",
+  "version": "0.0.0-cre",
   "description": "A diceroll tool for TRPG",
   "scripts": {
     "start": "webpack-dev-server --open --hot --content-base public/",
