@@ -96,7 +96,8 @@
             Saipage {{ version }} <small>- {{ commitHash }}</small>
           </div>
           <p>
-            Created by <a href="https://twitter.com/ysakasin">酒田　シンジ</a>
+            Created by <a href="https://twitter.com/ysakasin">酒田　シンジ</a>.
+            Modified by <a href="https://www.cre.ne.jp/">クリエイターズネットワーク</a>.
           </p>
 
           <p>
