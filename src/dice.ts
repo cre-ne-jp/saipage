@@ -36,10 +36,9 @@ export function getBcdiceURL(): string {
 
 export async function fetchDicebots(): Promise<DiceName[]> {
   const res = await axios.get(apiNames);
-  return res.data.names
-    .map((x: NameRes) => {
-      return { gameType: x.system, name: x.name };
-    });
+  return res.data.names.map((x: NameRes) => {
+    return { gameType: x.system, name: x.name };
+  });
 }
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
