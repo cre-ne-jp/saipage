@@ -84,15 +84,14 @@ export default class Log extends Vue {
   dicerollByText(gameType: string, text: string) {
     diceRoll(gameType, text)
       .then(res => {
-        const dices = res.dices.map((d: Dice) => {
-          return { face: d.faces, value: d.value };
-        });
         const log: LogI = {
           gameType: gameType,
           command: text,
-          body: res.result,
-          drawables: selectDiceResults(dices),
-          timestamp: new Date()
+          body: res.text,
+          drawables: selectDiceResults(res.rands),
+          timestamp: new Date(),
+          success: res.success,
+          failure: res.failure
         };
 
         this.$store.commit("appendLogBuffer", log);
@@ -134,6 +133,7 @@ export default class Log extends Vue {
   .subheading {
     color: rgba(0, 0, 0, 0.87);
     word-wrap: break-word;
+    white-space: pre-wrap;
     line-height: 1.2;
   }
 }
